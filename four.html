@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yes or No Buttons</title>
+    <style>
+        body {
+            background-color: rgb(249, 223, 231);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            z-index: 1;
+        }
+        img {
+            width: 300px; /* Adjust the size as needed */
+            height: auto;
+            margin-bottom: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button#yes-button:hover {
+            background-color: green;
+            color: white;
+        }
+        button#no-button:hover {
+            background-color: red;
+            color: white;
+        }
+        .heart {
+            position: absolute;
+            width: 0;
+            height: 0;
+            z-index: 0;
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 80px;
+            background: rgba(255, 0, 0, 0.7);
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        .heart::after {
+            left: 50px;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        @keyframes float {
+            from {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-1000px) scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+    <script>
+        function handleYesClick() {
+            for (let i = 0; i < 20; i++) {
+                createHeart();
+            }
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            const size = Math.random() * 50 + 10 + 'px';
+            heart.style.width = size;
+            heart.style.height = size;
+            heart.style.left = Math.random() * 100 + 'vw';
+            document.body.appendChild(heart);
+
+            heart.addEventListener('animationend', () => {
+                heart.remove();
+            });
+
+            setTimeout(() => {
+                heart.style.animation = 'float 4s infinite';
+            }, 0);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="doggie.jpeg" alt="Image">
+        <h1>ab tu dekh</h1>
+
+        <h4> ab to ha bolna pdega tereko</h4>
+        <button id="yes-button" onclick="handleYesClick()">Yes</button>
+        <!-- Replace with the URL of the new page -->
+    </div>
+</body>
+</html>

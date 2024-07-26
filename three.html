@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yes or No Buttons</title>
+    <style>
+        body {
+            background-color: rgb(178, 114, 124);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        img {
+            width: 300px; /* Adjust the size as needed */
+            height: auto;
+            margin-bottom: 20px;}
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button#yes-button:hover {
+            background-color: green;
+            color: white;
+        }
+        button#no-button:hover {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="chafa.jpeg" alt="Image">
+        <h1>evd kon khadus asta be</h1>
+        <h3>ata prt tu no select kr fkt mg ng ky hota te..</h3>
+        
+        <button id="yes-button" onclick="alert('finally.')">Yes</button>
+        <button id="no-button" onclick="window.location.href='four.html'">No</button> <!-- Replace with the URL of the new page -->
+    </div>
+</body>
+</html>

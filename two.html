@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yes or No Buttons</title>
+    <style>
+        body {
+            background-color: rgb(227, 175, 206);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        img {
+            width: 300px; /* Adjust the size as needed */
+            height: auto;
+            margin-bottom: 20px;}
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button#yes-button:hover {
+            background-color: green;
+            color: white;
+        }
+        button#no-button:hover {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="moon.jpg" alt="Image">
+        <h1>think again haa....</h1>
+        <h2> smj lena its an warning...</h2>
+        <button id="yes-button" onclick="alert('aww finally u cliked yes!! yahoo...')">Yes</button>
+        <button id="no-button" onclick="window.location.href='three.html'">No</button> <!-- Replace with the URL of the new page -->
+    </div>
+</body>
+</html>
